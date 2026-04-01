@@ -9,7 +9,7 @@ def download_from_s3(bucket: str, key: str, download_path: str):
     s3.download_file(bucket, key, download_path)
 
 def load_documents_from_s3(bucket: str, key: str) -> List[Document]:
-    local_path = f"/tmp/{key}"
+    local_path = f"/tmp/{os.path.basename(key)}"
 
     download_from_s3(bucket, key, local_path)
 
