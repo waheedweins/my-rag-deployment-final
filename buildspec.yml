@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       # Changed YOUR_REGION to us-east-1
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 675266034256.dkr.ecr.us-east-1.amazonaws.com
-      - REPOSITORY_NAME=rag-api
+      - REPOSITORY_NAME=my-rag-deployment-final
       - IMAGE_TAG=latest
   build:
     commands:
