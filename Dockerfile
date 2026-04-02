@@ -1,5 +1,5 @@
 # Use lightweight Python 3.11 image
-FROM python:3.11-slim
+FROM public.ecr.aws/docker/library/python:3.11-slim
 
 # Prevent Python from writing .pyc files & flush logs immediately
 ENV PYTHONDONTWRITEBYTECODE=1
