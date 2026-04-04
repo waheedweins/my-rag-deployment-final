@@ -26,4 +26,4 @@ COPY . .
 EXPOSE 8000
 
 # Start Gunicorn using main:app (since you renamed app.py to main.py)
-CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "main:app", "--bind", "0.0.0.0:8000", "--workers", "2"]
+CMD ["gunicorn", "-k", "uvicorn.workers.UvicornWorker", "main:app","--timeout", "999", "--bind", "0.0.0.0:8000", "--workers", "2"]
