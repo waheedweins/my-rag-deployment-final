@@ -14,7 +14,7 @@ def create_rag_chain(retriever):
     )
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         google_api_key=settings.GOOGLE_API_KEY,
         temperature=0
     )
